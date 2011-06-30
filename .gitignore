@@ -4,3 +4,6 @@ app/cache/*
 app/logs/*
 build/
 vendor/
+/nbproject/private/
+/access_log
+/error_log
