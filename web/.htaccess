@@ -1,3 +1,13 @@
+# [START] fix
+# problem was "you do not have permission to access this item"
+# solution source: http://bit.ly/kg8Oxp
+<Files ~ (\.pl)>
+Options ExecCGI FollowSymLinks
+</Files>
+
+Options +FollowSymLinks +SymLinksIfOwnerMatch
+# [ END ] fix
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-f
