@@ -5,7 +5,11 @@
 {% block content %}
     <h1>Hello {{ name }}!</h1>
     
+    {# example of calling a Twig filter #}
     {{ name | dump }}
+    
+    {# example of calling a Twig function #}
+    {{ k_dump( name ) }}
 {% endblock %}
 
 {% set code = code(_self) %}

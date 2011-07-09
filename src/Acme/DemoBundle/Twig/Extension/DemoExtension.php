@@ -31,6 +31,15 @@ class DemoExtension extends \Twig_Extension
     {
         return array(
             'code' => new \Twig_Function_Method($this, 'getCode', array('is_safe' => array('html'))),
+            'k_dump' => new \Twig_Function_Method($this, 'getDetailedDump', array())
+        );
+    }
+    
+    public function getDetailedDump($options) {
+        return(
+                '<pre>'
+                . $options
+                . '</pre>'
         );
     }
 
