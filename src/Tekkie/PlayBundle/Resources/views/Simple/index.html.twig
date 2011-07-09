@@ -7,8 +7,11 @@
 {% block content %}
     <h1>Test Twig Extension</h1>
     <ul>
-        <li>{{ varNotNull | dump }}</li>
-        <li>{{ varIsNull | quoteWithNull }}</li>
+        <li>{{ varNotNull | a_dump }}</li>
+        <li>{{ playMethod( varNotNull ) }}</li>
+        <li>{{ playMethod( varIsNull ) }}</li>
+        <li>{{ quoteWithNull( varNotNull ) }}</li>
+        <li>{{ quoteWithNull( varIsNull ) }}</li>
     </ul>
 
     <h1>Available demos</h1>

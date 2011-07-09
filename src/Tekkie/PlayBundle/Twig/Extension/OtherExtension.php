@@ -5,7 +5,7 @@ namespace Tekkie\PlayBundle\Twig\Extension;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Bundle\TwigBundle\Loader\FilesystemLoader;
 
-class DemoExtension extends \Twig_Extension
+class OtherExtension extends \Twig_Extension
 {
     protected $loader;
     protected $controller;
@@ -13,10 +13,6 @@ class DemoExtension extends \Twig_Extension
     public function __construct(FilesystemLoader $loader)
     {
         $this->loader = $loader;
-        //echo '<pre>';
-       // debug_print_backtrace();
-        
-        //var_dump($loader);die();
     }
 
     public function setController($controller)
@@ -27,20 +23,18 @@ class DemoExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'quoteWithNull' => new \Twig_Function_Method($this, 'getQuoteWithNull'),
-            'dump' => new \Twig_Filter_Function('var_dump'),
+            'playMethod' => new \Twig_Function_Method($this, 'getPlayMethod'),
         );
     }
     public function getFilters() {
         return( array(
-            'quoteWithNull' => new \Twig_Filter_Method( $this, 'getQuoteWithNull' ),
-            'dump' => new \Twig_Filter_Function('var_dump'),
+            'x_dump' => new \Twig_Filter_Function('var_dump'),
         ) );
     }
 
-    public function getQuoteWithNull( $item )
+    public function getPlayMethod( $item )
     {
-        return( is_null( $item ) ? 'null' : sprintf( '"%s"', $item ) );
+        return 'PLAY_' . ( is_null( $item ) ? 'null' : sprintf( '"%s"', $item ) );
     }
 
     /**
@@ -50,6 +44,6 @@ class DemoExtension extends \Twig_Extension
      */
     public function getName()
     {
-        return 'demo';
+        return 'other';
     }
 }

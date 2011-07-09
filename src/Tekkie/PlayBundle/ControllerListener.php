@@ -5,13 +5,13 @@ namespace Tekkie\PlayBundle;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
-use Tekkie\PlayBundle\Twig\Extension\DemoExtension;
+use Tekkie\PlayBundle\Twig\Extension\PlayExtension;
 
 class ControllerListener
 {
     protected $extension;
 
-    public function __construct(DemoExtension $extension)
+    public function __construct(PlayExtension $extension)
     {
         $this->extension = $extension;
     }

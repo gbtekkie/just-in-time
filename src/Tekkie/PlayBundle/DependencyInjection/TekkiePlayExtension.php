@@ -12,11 +12,6 @@ class TekkiePlayExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
-//        $definition = new Definition('Tekkie\PlayBundle\Twig\Extension\DemoExtension');
-//        // this is the most important part. Later in the startup process TwigBundle
-//        // searches through the container and registres all services taged as twig.extension.
-//        $definition->addTag('twig.extension');
-//        $container->setDefinition('demo', $definition);
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
     }

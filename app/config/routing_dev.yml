@@ -11,6 +11,11 @@ _demo:
     type:     annotation
     prefix:   /demo
 
+_simple:
+    resource: "@TekkiePlayBundle/Controller/SimpleController.php"
+    type:     annotation
+    prefix:   /simple
+
 _assetic:
     resource: .
     type:     assetic
