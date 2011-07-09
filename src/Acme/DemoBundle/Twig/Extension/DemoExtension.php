@@ -19,7 +19,11 @@ class DemoExtension extends \Twig_Extension
     {
         $this->controller = $controller;
     }
-
+    public function getFilters() {
+        return( array(
+            'dump' => new \Twig_Filter_Function( 'var_dump' ),
+        ) );
+    }
     /**
      * {@inheritdoc}
      */
