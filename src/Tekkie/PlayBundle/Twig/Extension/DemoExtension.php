@@ -13,10 +13,10 @@ class DemoExtension extends \Twig_Extension
     public function __construct(FilesystemLoader $loader)
     {
         $this->loader = $loader;
-        echo '<pre>';
+        //echo '<pre>';
        // debug_print_backtrace();
         
-        var_dump($loader);die();
+        //var_dump($loader);die();
     }
 
     public function setController($controller)
