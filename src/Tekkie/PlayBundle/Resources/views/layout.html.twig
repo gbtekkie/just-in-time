@@ -3,14 +3,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" href="{{ asset('bundles/tekkieplay/css/demo.css') }}" type="text/css" media="all" />
-        <title>{% block title %}Demo Bundle{% endblock %}</title>
+        <title>{% block title %}Layout | TekkiePlayBundle{% endblock %}</title>
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+        <link href='http://fonts.googleapis.com/css?family=Monofett|Lobster+Two&v2' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <div id="symfony-wrapper">
-            <div id="symfony-header">
+        <div id="wrapper">
+            <div id="page-header">
                 <a href="{{ path('_simple') }}">
-                    <img src="{{ asset('bundles/acmedemo/images/logo.gif') }}" alt="Symfony">
+                    <h2 class="logo">Just in Time</h2>
                 </a>
                 <form id="symfony-search" method="GET" action="http://symfony.com/search">
                     <label for="symfony-search-field"><span>Search on Symfony Website</span></label>
@@ -35,15 +36,10 @@
                 <div style="clear: both"></div>
             {% endblock %}
 
-            <div class="symfony-content">
+            <div class="page-content">
                 {% block content %}
                 {% endblock %}
             </div>
-
-            {% if code is defined %}
-                <h2>Code behind this page</h2>
-                <div class="symfony-content">{{ code|raw }}</div>
-            {% endif %}
         </div>
     </body>
 </html>

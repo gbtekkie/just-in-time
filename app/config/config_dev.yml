@@ -19,5 +19,8 @@ monolog:
             type:  firephp
             level: info
 
+# Assetic Configuration
 assetic:
     use_controller: true
+    filters:
+        cssrewrite: ~

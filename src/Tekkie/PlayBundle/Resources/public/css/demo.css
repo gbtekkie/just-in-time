@@ -12,6 +12,7 @@ html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pr
 html, body
 {
     background-color: #EFEFEF;
+    background-image: url('../images/site_background.jpg');
 }
 
 body
@@ -44,7 +45,7 @@ em
 
 h1, h2, h3
 {
-    font-family:    Georgia, "Times New Roman", Times, serif;
+    font-family:    "Lobster Two", Georgia, "Times New Roman", Times, serif;
     color:          #404040;
 }
 
@@ -101,23 +102,29 @@ ul li
     list-style-type: none;
 }
 
-#symfony-header
-{
-    position: relative;
-    padding: 30px 30px 20px 30px;
-}
-
-#symfony-wrapper
+#wrapper
 {
     width:  970px;
     margin: 0 auto;
 }
 
-.symfony-content
+#page-header
 {
-    background-color:           white;
-    border:                     1px solid #DFDFDF;
-    padding:                    50px;
+    position: relative;
+    padding: 30px 30px 20px 30px;
+    background-color:           #dfdfdf;
+    border:                     1px solid #fff;
+    margin-bottom : 10px;
+    -moz-border-radius:         0 0 16px 16px;
+    -webkit-border-radius:      0 0 16px 16px;
+    border-radius:              0 0 16px 16px;
+}
+
+.page-content
+{
+    background-color:           #dfdfdf;
+    border:                     1px solid #fff;
+    padding:                    2em;
     -moz-border-radius:         16px;
     -webkit-border-radius:      16px;
     border-radius:              16px;
@@ -290,4 +297,17 @@ ul#menu
     padding-left: 0;
     margin-right: 10px;
     display: inline;
+}
+
+.logo {
+    font-family: 'Monofett', Verdana, cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 0em;
+    word-spacing: 0em;
+    line-height: 1.4;
+    padding: 0 1em;
 }
