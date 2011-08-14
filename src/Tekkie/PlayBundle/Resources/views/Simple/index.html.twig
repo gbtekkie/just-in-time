@@ -5,19 +5,14 @@
 {% block content_header '' %}
 
 {% block content %}
-    <h1>Test Twig Extension</h1>
-    <ul>
-        <li>{{ varNotNull | a_dump }}</li>
-        <li>{{ playMethod( varNotNull ) }}</li>
-        <li>{{ playMethod( varIsNull ) }}</li>
-        <li>{{ quoteWithNull( varNotNull ) }}</li>
-        <li>{{ quoteWithNull( varIsNull ) }}</li>
-    </ul>
 
-    <h1>Available demos</h1>
-    <ul id="demo-list">
-        <li><a href="{{ path('_demo_hello', {'name': 'World'}) }}">Hello World</a></li>
-        <li><a href="{{ path('_demo_secured_hello', {'name': 'World'}) }}">Access the secured area</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ path('_demo_login') }}">Go to the login page</a></li>
-        {# <li><a href="{{ path('_demo_contact') }}">Send a Message</a></li> #}
+    <h2>The product details</h2>
+{% for product in products %}
+    <ul>
+        <li><span>Id: </span>{{ product.id }}</li>
+        <li><span>Name: </span>{{ product.name }}</li>
+        <li><span>Price: </span>{{ product.price }}</li>
+        <li><span>Description: </span>{{ product.description }}</li>
     </ul>
+{% endfor %}
 {% endblock %}
